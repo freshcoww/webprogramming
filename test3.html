@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head> <title> 시맨틱 태그로 웹페이지 만들기 </title>
+
+<style>
+
+html, body {margin:5%; padding:0; height: 100%}
+.header {width:100%; height:15%; background:yellow;}
+.nav {width:15%; height:70%; float:left; background:orange;}
+.section {color:cornsilk; width:70%; height: 70%; float: left; background:black;}
+.aside {color:cornsilk; width:15%; height:70%; float:left; background:cornflowerblue}
+.footer {width:100%; height:15%; clear:both; background:plum;}
+</style>
+
+
+</head>
+
+<body>
+    <header class="header">header</header>
+    <nav class="nav" > nav </nav>
+    <section class=section> section    
+    
+        <form>
+            <fieldset>
+                <legend>회원정보</legend>
+            <label>
+            이름 : <input type=text placeholder="이름을 입력하세요"><br>
+            </label>
+            <lable for="국적"> 국적 :  </lable>
+            <input id="국적" type=text list="countries"><br>
+                <DATALIST ID="countries">
+                <option value="선우나라">
+                <option value="대한민국">
+                <OPtion value="가리봉">
+            </DATALIST>
+           
+            나이 : <select name="나이">
+                <option value = "1"> 10대 </option>
+                <option value=2> 20대 </option>
+                <option value=3> 30대 </option>
+
+            </select> &nbsp;&nbsp;&nbsp;
+            암호 : <input type=password value=""><br>
+            
+            </fieldset>
+            내용 : <textarea cols=50 rows=10> 내용을 작성해주세요</textarea><br>
+
+            <Form>
+                일시 : <input type=month value=2020-03><br>
+                온도 : <input type=range min=0 max=10
+                list=온도>
+                <datalist id=온도>
+                    <option value=0 label=low></option>
+                    <option value=5 label=mid></option>
+                    <option value=10 label=max></option>
+                </datalist>
+            </Form>
+
+            <input type=submit value=제출><br>
+        </form>    
+    
+    
+    </section>
+    <aside class=aside> aside </aside>
+    <footer class=footer>footer<br>
+        색 선택
+        <input type = color value =#00bfff
+        onchange =document.body.style.color=this.value"></input>
+
+
+    </footer>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

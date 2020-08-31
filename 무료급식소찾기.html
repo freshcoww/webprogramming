@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>무료급식소 찾기 </title>
+
+ 
+ <!-- <link type="text/css" rel="stylesheet"
+  href="무료급식소.css"> -->
+
+<style>
+html, body {margin:0%; padding:0; height:100%;}
+.header{width:100%; height:20%; color:white; background-color: black;}
+.section{margin:10%; width:100%; height:80%; font-size: 15px;}
+div.radiobox{background-color:grey;}
+    h1 {font-size:30px}
+    caption {text-align: left; font-size:20px; margin-top:5px; margin-bottom: 5px;}
+</style>
+
+</head>
+
+<body>
+<header class=header>
+
+    <h1> 무료급식소 찾기 </h1>
+
+</header>
+<section class=section>
+
+    <br>
+<div class=radiobox>
+    <form>
+        <label> 
+        <input type="radio" name="일시" value="현재 일시"> 현재 일시
+        </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <label>
+        <input type="radio" name="일시" value="희망 일시" checked> 희망 일시
+        <br><br>
+
+    </div>
+            
+                시간 : <input type=time value="11:00" > 
+                요일 : <select name="요일">
+                    <option value="월"> 월요일 </option>
+                    <option value="화"> 화요일 </option>
+                    <option value="수"> 수요일 </option>
+                    <option value="목"> 목요일 </option>
+                    <option value="금"> 금요일 </option>
+                    <option value="토"> 토요일 </option>
+                    <option value="일"> 일요일 </option>
+                </select><br><br><br>
+        </label>
+
+         <div class=radiobox>   
+            <label> 
+            <input type="radio" name="장소" value="현재 장소"> 현재 장소
+            </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+            <label>
+            <input type="radio" name="장소" value="희망 장소" checked> 희망 장소
+            <br><br>
+
+        </div>
+        
+                장소 : <input type=text size=10 placeholder="시"" list="cities"> 
+                <datalist id="cities">
+                    <option value="서울특별시">
+                </datalist>
+
+                <input type=text size=10 placeholder="구"" list="gu">
+                <datalist id="gu">
+                    <option value="강서구">
+                </datalist>
+
+                <input type=text size=10 placeholder="동"" list="dong">
+                <datalist id="dong">
+                    <option value="등촌동">
+                </datalist>
+            </label><br><br><br><br>
+
+
+       주민번호 : <input type=text size=6> - <input type=text size=6> <br><br>
+            <input type=submit value="이용 가능한 급식소 찾기">
+    </form><br>
+
+
+    <hr width=80% align=left>
+    <table width=80%>
+        <caption> 이용가능 급식소</caption>
+        <thead>
+            <tr><th>연번</th><th>시설명</th><th>급식장소</th><th>급식요일</th>
+                <th>급식시간</th><th>전화번호</th></tr>
+        </thead>
+
+        <tbody>
+            <tr><td>1</td><td>test</td><td>test</td><td>test</td>
+                <td>test</td><td>test</td></tr>
+        </tbody>
+    </table>
+</section>
+</body>
+
+
+
+
+</html>

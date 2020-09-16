@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .btn{
+        width: 50px;
+        height: 50px;
+        font-size: 18pt;
+    }
+    #calc{
+        width: 150px;
+    }   
+    input#result{
+        width: 150px;
+        height: 30px;
+        border: 1px solid blue;
+        border-radius: 5px;
+    }
+</style>
+<body>
+<div id="calc">
+    <input type="text" id="result">
+    <hr>
+    <div id="butns">
+ 
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function getById(str)
+    {
+        return document.getElementById(str);
+    }
+ 
+    var result = getById('result');
+    var butns = getById('butns');
+    
+    var arrEvent = new Array();   //배열을 생성한다. 여기에 각 아이디별 객체 정보를 담는다.
+    
+    for(var i =1 ; i <=15 ; i++)
+    {
+        btn =document.createElement('button');  //ㅇ엘리먼트가 추가된다.
+        btn.className ='btn';  //클래스 부여
+        butns.appendChild(btn);  //자식에다 붙인다.
+        var val ="";
+        switch(i)
+        {
+            case 10 : val ='0'; break;
+            case 11 : val ='+'; break;
+            case 12 : val ='-'; break;
+            case 13 : val ='*'; break;
+            case 14 : val ='/'; break;
+            case 15 : val ='='; break;
+            default : val = i;
+        }
+        btn.innerText = val;
+        btn.value = val;
+        btn.id ="btn"+val;   //아이디 값 부여
+        arrEvent.push(getById(btn.id));  //배열에 push하면서 객체 정보를 담는다.
+    }
+    
+    //문자열을 수식으로 바꿔주는 -> eval() 함수 사용해서 한다.
+    //즉 이번 과제는 문자열을 받아 eval() 로 바꿔준다.
+    
+    for(var i = 0 ; i < arrEvent.length ; i++)
+    {
+        arrEvent[i].onclick = function(){   //그리고 반복을 돌면서 이벤트를 적용
+            if(this.value === "=")  //= 면 결과 값이 나와야하니까
+            { 
+                result.value = eval(result.value);    //eval함수를 적용시켜 다시 result.vaule영역을 초기화한다.
+                return;
+            }
+            result.value += this.value;
+        }
+    }
+/*
+var btnArr = butns.getElementsByClassName('btn');
+    console.log(btnArr);
+    for(var i = 0 ; i < btnArr.length ; i++)
+    {
+        btnArr[i].onclick = function(){
+            result.value  = this.innerText;
+        };     
+    }
+    로도 가능
+*/
+ 
+</script>

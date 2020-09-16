@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function createDIV()
+        {
+            var obj = document.getElementById("parent");
+            var newDIV =document.createElement("div");
+            newDIV.innerHTML="아자아자 화이팅"
+            newDIV.setAttribute("id","helloDiv")
+            newDIV.style.backgroundColor="yellow";
+            newDIV.onclick = function()
+            {
+                this.parentElement.removeChild(this)};
+            obj.appendChild(newDIV);    
+            }
+        
+    </script>
+</head>
+<body id="parent">
+<p><a href="javascript:createDIV()">DIV 생성</a></p>
+    
+</body>
+</html>

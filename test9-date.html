@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<body>
+<script>
+var current = new Date();
+if(current.getSeconds() % 2 == 0)
+document.body.style.backgroundColor="lightyellow";
+else
+document.body.style.backgroundColor="lightgreen";
+
+document.write("<h1> 현재시간 : " + current.getHours()+ "시"
++ current.getMinutes()+ "분"+current.getSeconds()+ "초</h1>");
+
+// 대소문자를 지켜줘야합니다!!ㅜㅜ
+
+</script>
+</body>
+
+</html>

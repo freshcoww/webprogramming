@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서누의 계산기</title>
+    <style>
+        .container {
+            background-color: grey;
+            display: table;
+            table-layout: fixed;
+            width: 60%;
+            height: 80%;
+        }
+
+        .container.button {
+            display: table-cell;
+            margin: 0;
+            border: solid black;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* table {
+            border-collapse: collapse;
+                width: 60%;
+                height: 80%;
+            text-align: center;
+        }
+
+        tbody td:hover {
+            background: rgb(253, 226, 231);
+        }
+
+        td, th {
+            border: 0.05em solid black;
+            font-size: 2em;
+            height: 15%;
+            width: 10%;
+        }
+
+        th {
+            padding-right: 1em;
+            padding-left: 1em;
+        } */
+
+        input {
+            height: stretch;
+            font-size: 1em;
+            border: none;
+            outline: none;
+            text-align: right;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+<script>
+
+
+function add(char){
+var display = document.getElementById('display')
+var result = document.getElementById('result')
+
+
+
+
+    if (result.value =="" && !isNaN(display.value.substr(this.length-1,1)))
+    {display.value+=char}
+    else if(result.value =="" && isNaN(display.value.substr(this.length-1,1)))
+    {
+        if(!isNaN(char)){
+    display.value+=char}
+    else{
+        display.value=display.value.slice(0,this.length-1)+char
+    }
+    }
+    else{display.value=char
+    result.value=""}
+    }
+
+    function calc(){
+    var display = document.getElementById('display')
+    var result = document.getElementById('result')
+        result.value=eval(display.value);
+        
+
+}
+
+
+</script>
+
+<div class=container>
+    <div class=button><input type="text" id="display"> </div>
+    
+</div>
+<div class=container>
+    <div class=button><input type="text" id="result"> </div>
+    
+</div>
+<div class=container>
+    <div class=button onclick="display.value=''; result.value='' ">AC</div>
+    <div class=button onclick="add('/')">÷</div>
+    
+</div>
+<div class=container>
+    <div class=button> </div>
+    
+</div>
+<div class=container>
+    <div class=button> </div>
+    
+</div>
+<div class=container>
+    <div class=button> </div>
+    
+</div>
+<div class=container>
+    <div class=button> </div>
+    
+</div>
+
+
+    <!-- <table border="1">
+        <thaed>
+            <tr>
+                <th colspan="4" ; style="text-align:right;">
+                    <input type="text" id="display">
+
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="4" ; style="text-align:right;">
+
+                    <input type="text" id="result">
+
+                </th>
+            </tr>
+        </thaed>
+        <tbody>
+            <tr>
+                <td colspan="3"; onclick="display.value=''; result.value='' ">AC</td>
+                <td onclick="add('/')">÷</td>
+            </tr>
+
+            <tr>
+                <td onclick="add(7)">7</td>
+                <td onclick="add(8)">8</td>
+                <td onclick="add(9)">9</td>
+                <td onclick="add('*')">×</td>
+            </tr>
+
+            <tr>
+                <td onclick="add(4)">4</td>
+                <td onclick="add(5)">5</td>
+                <td onclick="add(6)">6</td>
+                <td onclick="add('-')">－</td>
+
+            </tr>
+
+            <tr>
+                <td onclick="add(1)">1</td>
+                <td onclick="add(2)">2</td>
+                <td onclick="add(3)">3</td>
+                <td onclick="add('+')">＋</td>
+
+            </tr>
+
+            <tr>
+                <td colspan=2; onclick="add(0)">0</td>
+                <td onclick="add('.')">.</td>
+                <td onclick="calc()">＝</td>
+            </tr>
+        </tbody>
+    </table> -->
+</body>
+
+</html>

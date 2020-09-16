@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+    function change() {
+        var span = document.getElementById("hellospan");
+        span.style.color="green";
+        span.style.fontsize="20px";
+        span.style.dispaly="block";
+        span.style.width="6em"
+        span.style.border="2px dotted black";
+        span.style.margin="20px"
+    }
+    
+</script>
+
+<script>
+function change1(obj, size, color){
+    obj.style.color = color;
+    obj.style.fontsize= size;
+}
+
+</script>
+
+</head>
+
+<body>
+    <p style="color:blue">
+    이것은 <span id="hellospan" style="color:red">
+    문장이다</span></p>
+    <input type="button" value="스타일변경" onclick="change()"> 
+<hr>
+        <button onclick="change1(this,'15px','red')">버튼1</button>
+        <button onclick="change1(this,'30px','blue')">버튼2</button>
+        <div onclick="change1(this, '20px','pink')">한 번 눌러바! </div>
+        <!-- function 이름을 같게 하면 밑에 정의한 것 만 적용된다리!! -->
+</body>
+</html>

@@ -7,18 +7,76 @@
 
 <body>
 <script>
-    function over(obj) {obj.src="pent2.jpg";}
-    function out(obj) {obj.src="mung.jpg";}
+    function merong(obj) {obj.src="pent2.jpg";}
+    function memerong(obj) {obj.src="mung.jpg";}
 </script>
 
 마우스를 올려보세요
-<span onmouseover="over(this)"> 여기
+<span onmouseover="over(this)"> 
 </span>
 <img src="nya.jpg" alt="이미지"
-onmouseover="over(this)"
-onmouseout="out(this)">
+onmouseover="merong(this)"
+onmouseout="memerong(this)">
 
 <a href="javascript:alert('클릭하셨어요?')">클릭해보세요</a>
+
+<script>
+    document.write("<h2>안녕하세요</h2>");
+    document.write('누군가 \"그렇다면 이렇습니다"\라고 말했습니다.<br><br>');
+</script>
+
+<!-- <script>
+    var grade;
+    var ret = prompt("성적을 입력하세요");
+    if(ret >= 90) grade="A";
+    else if(ret >=80) grade="B";
+    else if(ret >=70) grade="C";
+    else grade="F";
+    document.write("당신의 성적은" + grade + "입니다.")
+</script> -->
+
+<script>
+    for(var i=0; i<10; i++)
+    document.write(i);
+    document.write("<br><br>");
+
+</script>
+
+<script>
+    var size=10;
+    while(size<=35) {
+        size+=5
+    
+    document.write("<span style='font-size:"+size+"px'>");
+    document.write(size+"px </span>");
+
+    }
+    document.write("<br>")
+</script>
+
+<script>
+    for(var size=10; size<=35; size+=5) {
+        document.write("<span style='font-size:" + size + "px'>");
+        document.write(size+"px </span>")
+    }
+    document.write("<br>")
+</script>
+
+<script>
+    for(i=1; i<=5; i++) {
+        for(j=1; j<=i; j++) {document.write(i);}
+        document.write("<br>");
+    }
+
+</script>
+
+<script>
+    for(i=5; i>=1; i--) { 
+        for(j=1; j<=i; j++) {document.write(j);}
+        document.write("<br>")
+    }
+</script>
+
 </body>
 
 </html>
